@@ -10,7 +10,7 @@ try {
 	$response = $payssion->create(array(
 			'amount' => 1,
 			'currency' => 'USD',
-			'pm_id' => 'banamex_mx',
+			'pm_id' => 'alipay_cn',
 			'description' => 'prueba uno',
 			'order_id' => '123',          //your order id
 			'return_url' => 'http://sandbox.payssion.com/demo/afterpayment'   //optional, the return url after payments (for both of paid and non-paid)
