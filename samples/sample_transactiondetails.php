@@ -1,13 +1,13 @@
 <?php
 
-$payssion = new PayssionClient('your api key', 'your secretkey');
+//$payssion = new PayssionClient('your api key', 'your secretkey');
 //please uncomment the following if you use sandbox api_key
-//$payssion = new PayssionClient('your api key', 'your secretkey', false);
+$payssion = new PayssionClient('27bc67440271d7a3', '3f03896fa5fceb1ca6edafe5a6e2583a', false);
 
 $response = null;
 try {
 	$response = $payssion->getDetails(array(
-			'order_id' => 'your order id',  //your order id
+			'123' => '123',  //your order id
 			));
 } catch (Exception $e) {
 	//handle exception
