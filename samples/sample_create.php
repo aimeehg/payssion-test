@@ -32,7 +32,8 @@ if ($payssion->isSuccess()) {
 	    }
 	} else {
 	//just in case, should not be here
+	echo "just in case, should not be here";
 	}
 } else {
-	//handle failed
+	echo "handle failed";
 }
