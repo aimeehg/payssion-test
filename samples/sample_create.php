@@ -8,9 +8,9 @@ $payssion = new PayssionClient('6eac014c862c695c', '98147c9bf749c14bbdba00744d08
 $response = null;
 try {
 	$response = $payssion->create(array(
-			'amount' => 1,
+			'amount' => 21,
 			'currency' => 'USD',
-			'pm_id' => 'alipay_cn',
+			'pm_id' => 'tenpay_cn',
 			'description' => 'prueba uno',
 			'order_id' => '123',          //your order id
 			'return_url' => 'http://sandbox.payssion.com/demo/afterpayment'   //optional, the return url after payments (for both of paid and non-paid)
