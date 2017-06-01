@@ -17,11 +17,11 @@
     <b>Choose payment method:</b>
     <div class="row">
     <div class="col-sm-4">
-    <img src="images/alipay.png">
-    <br>
-    <img src="images/unionpay.png">
-    <br>
-    <img src="images/tenpay.png">
+    <table>
+        <td><img src="images/alipay.png"></td>
+        <td><img src="images/unionpay.png"></td>
+        <td><img src="images/tenpay.png"></td>
+    </table>
     </div>
     <div class="col-sm-4"></div>
     <div class="col-sm-4"></div>
