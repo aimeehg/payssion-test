@@ -1,4 +1,4 @@
-<form name="payssion_payment" action="http://sandbox.payssion.com/payment/create.html" method="post">
+<form name="payssion_payment" action="https://www.payssion.com/payment/create.html" method="post">
     <input type="hidden" name="api_key" value="6eac014c862c695c">
     <input type="hidden" name="api_sig" value="98147c9bf749c14bbdba00744d08a7a4">
     <input type="hidden" name="pm_id" value="alipay_cn">
