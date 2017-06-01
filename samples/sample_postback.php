@@ -3,8 +3,8 @@
 // Send an empty HTTP 200 OK response to acknowledge receipt of the notification
 header('HTTP/1.1 200 OK');
  
-$api_key  = ''; //your api key
-$secret_key = ''; //your secret key
+$api_key  = '6eac014c862c695c'; //your api key
+$secret_key = '98147c9bf749c14bbdba00744d08a7a4'; //your secret key
 
 // Assign payment notification values to local variables
 $pm_id = $_POST['pm_id'];
@@ -32,6 +32,7 @@ if ($notify_sig == $check_sig) {
 		case 'completed':
 			//$order_id should be your order id
 			//update the order as paid
+			echo "completed";
 			break;
 		case 'paid_partial':
 			//this is rare case if it goes here
