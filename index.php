@@ -58,6 +58,14 @@ p{margin-bottom:.3em;}
     <b>Choose payment method:</b>
     <div class="row">
     <div class="col-sm-4">
+        <div class="payment-selector">
+        <input checked="checked" id="alipay" type="radio" name="alipay" value="alipay" />
+        <label class="payment alipay" for="alipay"></label>
+        <input id="unionpay" type="radio" name="unionpay" value="unionpay" />
+        <label class="payment unionpay"for="unionpay"></label>
+        <input id="tenpay" type="radio" name="tenpay" value="tenpay" />
+        <label class="payment tenpay"for="tenpay"></label>
+    </div>
     <form name="payssion_payment" action="https://www.payssion.com/payment/create.html" method="post">
         <input type="hidden" name="api_key" value="6eac014c862c695c">
         <input type="hidden" name="api_sig" value="98147c9bf749c14bbdba00744d08a7a4">
@@ -76,14 +84,6 @@ p{margin-bottom:.3em;}
         <td><img src="images/tenpay.png"></td>
     </table>
     -->
-    <div class="payment-selector">
-        <input checked="checked" id="alipay" type="radio" name="alipay" value="alipay" />
-        <label class="payment alipay" for="alipay"></label>
-        <input id="unionpay" type="radio" name="unionpay" value="unionpay" />
-        <label class="payment unionpay"for="unionpay"></label>
-        <input id="tenpay" type="radio" name="tenpay" value="tenpay" />
-        <label class="payment tenpay"for="tenpay"></label>
-    </div>
     </div>
     <div class="col-sm-4"></div>
     <div class="col-sm-4"></div>
