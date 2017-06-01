@@ -57,7 +57,7 @@ p{margin-bottom:.3em;}
     <body>
     <b>Choose payment method:</b>
     <div class="row">
-    <form name="payssion_payment" action="https://www.payssion.com/payment/create.html" method="post">
+    <form name="payssion_payment" action="result.php" method="post">
         <div class="col-sm-4">
             <div class="payment-selector">
             <input checked="checked" id="alipay" type="radio" name="method" value="alipay" />
