@@ -2,7 +2,7 @@
 
 //$payssion = new PayssionClient('your api key', 'your secretkey');
 //please uncomment the following if you use sandbox api_key
-$payssion = new PayssionClient('27bc67440271d7a3', '3f03896fa5fceb1ca6edafe5a6e2583a', false);
+$payssion = new PayssionClient('6eac014c862c695c', '98147c9bf749c14bbdba00744d08a7a4');
 
 $response = null;
 try {
