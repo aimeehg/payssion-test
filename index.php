@@ -63,9 +63,9 @@ p{margin-bottom:.3em;}
             <input checked="checked" id="alipay" type="radio" name="method" value="alipay" />
             <label class="payment alipay" for="alipay"></label>
             <input id="unionpay" type="radio" name="method" value="unionpay" />
-            <label class="payment unionpay"for="unionpay"></label>
+            <label class="payment unionpay" for="unionpay"></label>
             <input id="tenpay" type="radio" name="method" value="tenpay" />
-            <label class="payment tenpay"for="tenpay"></label>
+            <label class="payment tenpay" for="tenpay"></label>
         </div>
         <input type="hidden" name="api_key" value="6eac014c862c695c">
         <input type="hidden" name="api_sig" value="98147c9bf749c14bbdba00744d08a7a4">
