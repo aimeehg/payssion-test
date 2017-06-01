@@ -16,10 +16,15 @@
     <body>
     <b>Choose payment method:</b>
     <div class="row">
-    <div class="col-sm-3"><img src="images/alipay.png"></div>
-    <div class="col-sm-3"><img src="images/unionpay.png"></div>
-    <div class="col-sm-3"><img src="images/tenpay.png"></div>
-    <div class="col-sm-3"></div>
+    <div class="col-sm-4">
+    <img src="images/alipay.png">
+    <br>
+    <img src="images/unionpay.png">
+    <br>
+    <img src="images/tenpay.png">
+    </div>
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4"></div>
     </div>
     <br>
     <form name="payssion_payment" action="https://www.payssion.com/payment/create.html" method="post">
