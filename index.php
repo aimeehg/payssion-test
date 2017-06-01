@@ -60,11 +60,11 @@ p{margin-bottom:.3em;}
     <form name="payssion_payment" action="https://www.payssion.com/payment/create.html" method="post">
         <div class="col-sm-4">
             <div class="payment-selector">
-            <input checked="checked" id="alipay" type="radio" name="alipay" value="alipay" />
+            <input checked="checked" id="alipay" type="radio" name="method" value="alipay" />
             <label class="payment alipay" for="alipay"></label>
-            <input id="unionpay" type="radio" name="unionpay" value="unionpay" />
+            <input id="unionpay" type="radio" name="method" value="unionpay" />
             <label class="payment unionpay"for="unionpay"></label>
-            <input id="tenpay" type="radio" name="tenpay" value="tenpay" />
+            <input id="tenpay" type="radio" name="method" value="tenpay" />
             <label class="payment tenpay"for="tenpay"></label>
         </div>
         <input type="hidden" name="api_key" value="6eac014c862c695c">
