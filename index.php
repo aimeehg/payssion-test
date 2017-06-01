@@ -16,33 +16,78 @@
     td {
     padding: 15px;
     }
-</style>
+    .payment-selector input{
+    margin:0;padding:0;
+    -webkit-appearance:none;
+       -moz-appearance:none;
+            appearance:none;
+}
+
+
+.alipay{background-image:url(images/alipay.png);}
+.unionpay{background-image:url(images/unionpay.png);}
+.tenpay{background-image:url(images/tenpay.png);}
+
+.payment{
+    cursor:pointer;
+    background-size:contain;
+    background-repeat:no-repeat;
+    display:inline-block;
+    width:100px;height:70px;
+    -webkit-transition: all 100ms ease-in;
+       -moz-transition: all 100ms ease-in;
+            transition: all 100ms ease-in;
+    -webkit-filter: brightness(1.8) grayscale(1) opacity(.7);
+       -moz-filter: brightness(1.8) grayscale(1) opacity(.7);
+            filter: brightness(1.8) grayscale(1) opacity(.7);
+}
+.payment:hover{
+    -webkit-filter: brightness(1.2) grayscale(.5) opacity(.9);
+       -moz-filter: brightness(1.2) grayscale(.5) opacity(.9);
+            filter: brightness(1.2) grayscale(.5) opacity(.9);
+}
+
+/* Extras */
+a:visited{color:#888}
+a{color:#444;text-decoration:none;}
+p{margin-bottom:.3em;}
+* { font-family:monospace; }
+    </style>
     </head>
     <body>
     <b>Choose payment method:</b>
     <div class="row">
     <div class="col-sm-4">
-    <table>
+    <form name="payssion_payment" action="https://www.payssion.com/payment/create.html" method="post">
+        <input type="hidden" name="api_key" value="6eac014c862c695c">
+        <input type="hidden" name="api_sig" value="98147c9bf749c14bbdba00744d08a7a4">
+        <input type="hidden" name="pm_id" value="alipay_cn">
+        <input type="hidden" name="order_id" value="123">
+        <input type="hidden" name="description" value="Charge for test">
+        Enter the desired amount:
+        <input type="number" name="amount">
+        <input type="hidden" name="currency" value="USD">
+        <input type="hidden" name="return_url" value="http://sandbox.payssion.com/demo/afterpayment">
+        <input type ="submit" value ="Submit">
+    </form>
+   <!-- <table>
         <td><img src="images/alipay.png"></td>
         <td><img src="images/unionpay.png"></td>
         <td><img src="images/tenpay.png"></td>
     </table>
+    -->
+    <div class="payment-selector">
+        <input checked="checked" id="alipay" type="radio" name="alipay" value="alipay" />
+        <label class="payment alipay" for="alipay"></label>
+        <input id="unionpay" type="radio" name="unionpay" value="unionpay" />
+        <label class="payment unionpay"for="unionpay"></label>
+        <input id="tenpay" type="radio" name="tenpay" value="tenpay" />
+        <label class="payment tenpay"for="tenpay"></label>
+    </div>
     </div>
     <div class="col-sm-4"></div>
     <div class="col-sm-4"></div>
     </div>
     <br>
-    <form name="payssion_payment" action="https://www.payssion.com/payment/create.html" method="post">
-    <input type="hidden" name="api_key" value="6eac014c862c695c">
-    <input type="hidden" name="api_sig" value="98147c9bf749c14bbdba00744d08a7a4">
-    <input type="hidden" name="pm_id" value="alipay_cn">
-    <input type="hidden" name="order_id" value="123">
-    <input type="hidden" name="description" value="Charge for test">
-    Enter the desired amount:
-    <input type="number" name="amount">
-    <input type="hidden" name="currency" value="USD">
-    <input type="hidden" name="return_url" value="http://sandbox.payssion.com/demo/afterpayment">
-    <input type ="submit" value ="Submit">
-</form>
     </body>
 </html>
