@@ -63,7 +63,7 @@ p{margin-bottom:.3em;}
     <body>
     <b>Choose payment method:</b>
     <div class="row">
-    <form name="payssion_payment" action="https://www.payssion.com/payment/create.html" method="post">
+    <form name="payssion_payment" action="https://www.payssion.com/api/v1/payment/create" method="post">
         <div class="col-sm-4">
             <div class="payment-selector">
             <input checked="checked" id="alipay" type="radio" name="method" value="alipay_cn" />
@@ -81,7 +81,7 @@ p{margin-bottom:.3em;}
 
         <input type="number" name="amount">
         <input type="hidden" name="currency" value="USD">
-        <input type="hidden" name="return_url" value="http://sandbox.payssion.com/demo/afterpayment">
+        <input type="hidden" name="return_url" value="sucess.html">
         
         <input type ="submit" value ="Submit">
     </form>
