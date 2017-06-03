@@ -66,7 +66,7 @@ p{margin-bottom:.3em;}
     <form name="payssion_payment" action="create.php" method="post">
         <div class="col-sm-4">
             <div class="payment-selector">
-            <input checked="checked" id="alipay" type="radio" name="method" value="alipay_cn" />
+            <input checked="checked" id="alipay" type="radio" name="method" value="oxxo_mx" />
             <label class="payment alipay" for="alipay"></label>
             <input id="unionpay" type="radio" name="method" value="unionpay_cn" />
             <label class="payment unionpay" for="unionpay"></label>
@@ -76,10 +76,10 @@ p{margin-bottom:.3em;}
         
        <input type="hidden" name="api_key" value="6eac014c862c695c">
         <input type="hidden" name="api_sig" value="98147c9bf749c14bbdba00744d08a7a4">
-        <input type="hidden" name="pm_id" value="alipay_cn">
+       
         <input type="hidden" name="order_id" value="123">
         <input type="hidden" name="description" value="Charge for test">
-
+        Enter amount:
         <input type="number" name="amount">
         <input type="hidden" name="currency" value="USD">
         <input type="hidden" name="return_url" value="sucess.html">
