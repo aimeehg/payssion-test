@@ -40,7 +40,8 @@ if ($payssion->isSuccess()) {
 		if (in_array("redirect", $todo_list)) {
 		    //redirect the users to the redirect url or send the url by email
 		    $paylink = $response['redirect_url'];
-		    echo $paylink;
+		   // echo $paylink;
+		   header('Location: '.$paylink);
 	    }
 	} else {
 	//just in case, should not be here
