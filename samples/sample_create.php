@@ -6,6 +6,11 @@ require_once("../lib/PayssionClient.php");
 $payssion = new PayssionClient('6eac014c862c695c', '98147c9bf749c14bbdba00744d08a7a4');
 
 $response = null;
+$pm_id = $_POST['pm_id'];
+$amount = $_POST['amount'];
+$currency = $_POST['currency'];
+$order_id = $_POST['order_id'];
+$state = $_POST['state'];
 try {
 	$response = $payssion->create(array(
 			'amount' => 21,

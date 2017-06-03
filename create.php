@@ -3,17 +3,26 @@ require_once("../lib/PayssionClient.php");
 
 //$payssion = new PayssionClient('your api key', 'your secretkey');
 //please uncomment the following if you use sandbox api_key
-$payssion = new PayssionClient('6eac014c862c695c', '98147c9bf749c14bbdba00744d08a7a4');
+$api_key = $_POST['api_key'];
+$api_sig = $_POST['api_sig'];
+$amount = $_POST['amount'];
+$pm_id = $_POST['method'];
+$currency = $_POST['currency'];
+$order_id = $_POST['order_id'];
+$description = $_POST['description'];
+$return_url = $_POST['return_url'];
+$payssion = new PayssionClient($api_key, $api_sig);
 
 $response = null;
+
 try {
 	$response = $payssion->create(array(
-			'amount' => 21,
-			'currency' => 'USD',
-			'pm_id' => 'tenpay_cn',
-			'description' => 'prueba uno',
-			'order_id' => '123',          //your order id
-			'return_url' => 'http://sandbox.payssion.com/demo/afterpayment'   //optional, the return url after payments (for both of paid and non-paid)
+			'amount' => $amount,
+			'currency' => $currency,
+			'pm_id' => $pm_id,
+			'description' => $description,
+			'order_id' => $order_id,          //your order id
+			'return_url' => $return_url   //optional, the return url after payments (for both of paid and non-paid)
 	));
 } catch (Exception $e) {
 	//handle exception

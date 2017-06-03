@@ -63,7 +63,7 @@ p{margin-bottom:.3em;}
     <body>
     <b>Choose payment method:</b>
     <div class="row">
-    <form name="payssion_payment" action="https://www.payssion.com/api/v1/payment/create" method="post">
+    <form name="payssion_payment" action="create.php" method="post">
         <div class="col-sm-4">
             <div class="payment-selector">
             <input checked="checked" id="alipay" type="radio" name="method" value="alipay_cn" />
@@ -73,6 +73,7 @@ p{margin-bottom:.3em;}
             <input id="tenpay" type="radio" name="method" value="tenpay_cn" />
             <label class="payment tenpay" for="tenpay"></label>
         </div>
+        
        <input type="hidden" name="api_key" value="6eac014c862c695c">
         <input type="hidden" name="api_sig" value="98147c9bf749c14bbdba00744d08a7a4">
         <input type="hidden" name="pm_id" value="alipay_cn">
