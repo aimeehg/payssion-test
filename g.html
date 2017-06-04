@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.7.0/js/md5.js"></script>
     </head>
     <body>
         <script type="text/javascript">
@@ -24,7 +24,7 @@ var desc = $('#desc').val();
 var returnurl = $('#return').val();
 var secret = "98147c9bf749c14bbdba00744d08a7a4";
 var data = [api, pm, amount, currency, order, secret];
-var sign = CryptoJS.MD5(data.join("|"));
+var sign = md5(data.join("|"));
 console.log(sign);
 
 //console.log(json);
