@@ -1,5 +1,13 @@
-<script type="text/javascript">
-
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <script type="text/javascript">
  $("#btn").click(function(){
  var pm = $('input[name=method]:checked').val();
 var api = $('#api').val();
@@ -11,7 +19,6 @@ var returnurl = $('#return').val();
 var secret = "98147c9bf749c14bbdba00744d08a7a4";
 var data = [api, pm, amount, currency, order, secret];
 var sign = data.join();
-
     $.ajax({
             type:"POST",
             url:form.attr("action"),
@@ -21,9 +28,8 @@ var sign = data.join();
             }
         });
     });
-
 </script>
-<b>Choose payment method:</b>
+    <b>Choose payment method:</b>
 
 <form id="form"  method="post" name="payssion_payment">
 <div class="payment-selector">
@@ -46,3 +52,5 @@ Enter amount:
 
 </div>
 </form>
+    </body>
+</html>
