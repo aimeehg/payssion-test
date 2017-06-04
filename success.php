@@ -6,12 +6,11 @@ require_once("./lib/PayssionClient.php");
 //$payssion = new PayssionClient('your api key', 'your secretkey');
 //please uncomment the following if you use sandbox api_key
 $payssion = new PayssionClient('6eac014c862c695c', '98147c9bf749c14bbdba00744d08a7a4');
-$trans = $_GET['transaction_id'];
-echo "trans: $trans";
+$order = $_GET['order_id'];
 $response = null;
 try {
 	$response = $payssion->getDetails(array(
-			'123' => '123',  //your order id
+			'order_id' => $order,  //your order id
 			));
 } catch (Exception $e) {
 	//handle exception
