@@ -5,6 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="http://crypto-js.googlecode.com/svn/tags/3.0.2/build/rollups/md5.js"></script>
     </head>
     <body>
         <script type="text/javascript">
@@ -23,7 +24,7 @@ var desc = $('#desc').val();
 var returnurl = $('#return').val();
 var secret = "98147c9bf749c14bbdba00744d08a7a4";
 var data = [api, pm, amount, currency, order, secret];
-var sign = md5(data.join("|"));
+var sign = CryptoJS.MD5(data.join("|"));
 console.log(sign);
 
 //console.log(json);
