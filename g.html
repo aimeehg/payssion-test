@@ -1,0 +1,48 @@
+<script type="text/javascript">
+
+ $("#btn").click(function(){
+ var pm = $('input[name=method]:checked').val();
+var api = $('#api').val();
+var amount = $('#amount').val();
+var currency = $('#currency').val();
+var order = $('#order').val();
+var desc = $('#desc').val();
+var returnurl = $('#return').val();
+var secret = "98147c9bf749c14bbdba00744d08a7a4";
+var data = [api, pm, amount, currency, order, secret];
+var sign = data.join();
+
+    $.ajax({
+            type:"POST",
+            url:form.attr("action"),
+            data: { api_key: api, api_sig: sign, pm_id: pm, order_id: order, description: desc, amount: amount, currency: currency, return_url: returnurl },
+            success: function(response){
+                console.log(response);  
+            }
+        });
+    });
+
+</script>
+<b>Choose payment method:</b>
+
+<form id="form"  method="post" name="payssion_payment">
+<div class="payment-selector">
+<input id="alipay" checked="checked" name="method" type="radio" value="alipay_cn" />
+<label class="payment alipay" for="alipay"></label>
+<input id="unionpay" name="method" type="radio" value="unionpay_cn" />
+<label class="payment unionpay" for="unionpay"></label>
+<input id="tenpay" name="method" type="radio" value="tenpay_cn" />
+<label class="payment tenpay" for="tenpay"></label>
+<input id="api" name="api_key" type="hidden" value="6eac014c862c695c" />
+<input id="sig" name="api_sig" type="hidden" value="" />
+<input id="order" name="order_id" type="hidden" value="123" />
+<input id="desc "name="description" type="hidden" value="Charge for test" />
+Enter amount:
+<input id="amount" name="amount" type="number" />
+<input id="currency" name="currency" type="hidden" value="USD" />
+<input id="return" name="return_url" type="hidden" value="payssion-test.azurewebsites.net/success.php" />
+
+<input id="btn" type="submit" value="Submit"/>
+
+</div>
+</form>

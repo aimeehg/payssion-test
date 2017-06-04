@@ -9,3 +9,21 @@
     <input type="hidden" name="return_url" value="http://sandbox.payssion.com/demo/afterpayment">
     <input type ="submit" value ="Submit">
 </form>
+<script type="text/javascript">
+
+
+      var txtOne = document.getElementById('api').value;
+
+alert(txtOne);
+  var pm = $('input[name=method]:checked').val();
+var api = $('#api').val();
+var amount = $('#amount').val();
+var currency = $('#currency').val();
+var order = $('#order').val();
+var secret = "98147c9bf749c14bbdba00744d08a7a4";
+var data = [api, pm, amount, currency, order, secret];
+var sign = data.join();
+alert("dsfsd");
+$('#sig').val(sign);
+
+</script>
