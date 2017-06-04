@@ -66,7 +66,7 @@ p{margin-bottom:.3em;}
     <form name="payssion_payment" action="create.php" method="post">
         <div class="col-sm-4">
             <div class="payment-selector">
-            <input checked="checked" id="alipay" type="radio" name="method" value="oxxo_mx" />
+            <input checked="checked" id="alipay" type="radio" name="method" value="alipay_cn" />
             <label class="payment alipay" for="alipay"></label>
             <input id="unionpay" type="radio" name="method" value="unionpay_cn" />
             <label class="payment unionpay" for="unionpay"></label>
