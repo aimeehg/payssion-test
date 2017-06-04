@@ -82,7 +82,7 @@ p{margin-bottom:.3em;}
         Enter amount:
         <input type="number" name="amount">
         <input type="hidden" name="currency" value="USD">
-        <input type="hidden" name="return_url" value="sucess.php">
+        <input type="hidden" name="return_url" value="payssion-test.azurewebsites.net/success.php">
         
         <input type ="submit" value ="Submit">
     </form>
