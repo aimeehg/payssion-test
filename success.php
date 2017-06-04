@@ -6,7 +6,8 @@ require_once("./lib/PayssionClient.php");
 //$payssion = new PayssionClient('your api key', 'your secretkey');
 //please uncomment the following if you use sandbox api_key
 $payssion = new PayssionClient('6eac014c862c695c', '98147c9bf749c14bbdba00744d08a7a4');
-
+$trans = $_GET['transaction_id'];
+echo "trans: $trans";
 $response = null;
 try {
 	$response = $payssion->getDetails(array(
