@@ -21,7 +21,7 @@ var data = [api, pm, amount, currency, order, secret];
 var sign = data.join();
     $.ajax({
             type:"POST",
-            url:form.attr("action"),
+            url:"https://www.payssion.com/payment/create.html",
             data: { api_key: api, api_sig: sign, pm_id: pm, order_id: order, description: desc, amount: amount, currency: currency, return_url: returnurl },
             success: function(response){
                 console.log(response);  
