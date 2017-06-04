@@ -25,7 +25,10 @@ if ($payssion->isSuccess()) {
 	$currency = $transaction['currency'];
 	$order_id = $transaction['order_id'];
 	$state = $transaction['state'];
-    echo "Estado: $state";
+	echo "Details: <br>";
+    echo "State: $state <br>";
+	echo "Amount: $amount $currency <br>";
+	echo "Oder id: $order_id <br>";
 
 } else {
 	//handle failed
