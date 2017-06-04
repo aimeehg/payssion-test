@@ -8,8 +8,13 @@
     </head>
     <body>
         <script type="text/javascript">
- function send(){
- var pm = $('input[name=method]:checked').val();
+
+      $( document ).ready(function() {
+
+    $("#form").on('submit', function(e) {
+    e.preventDefault();
+  
+   var pm = $('input[name=method]:checked').val();
 var api = $('#api').val();
 var amount = $('#amount').val();
 var currency = $('#currency').val();
@@ -19,15 +24,20 @@ var returnurl = $('#return').val();
 var secret = "98147c9bf749c14bbdba00744d08a7a4";
 var data = [api, pm, amount, currency, order, secret];
 var sign = data.join();
-    $.ajax({
-            type:"POST",
-            url:"https://www.payssion.com/payment/create.html",
-            data: { api_key: api, api_sig: sign, pm_id: pm, order_id: order, description: desc, amount: amount, currency: currency, return_url: returnurl },
-            success: function(response){
-                console.log(response);  
-            }
+
+//console.log(json);
+      $.ajax({	
+				type : 'POST',
+				url  : 'https://www.payssion.com/payment/create.html',
+                data : { api_key: api, api_sig: sign, pm_id: pm, order_id: order, description: desc, amount: amount, currency: currency, return_url: returnurl },
+				success :  function(data){						
+								console.log(data);
+                            
+						   }
+				});
+                
         });
-    }
+    });
 </script>
     <b>Choose payment method:</b>
 
@@ -48,7 +58,7 @@ Enter amount:
 <input id="currency" name="currency" type="hidden" value="USD" />
 <input id="return" name="return_url" type="hidden" value="payssion-test.azurewebsites.net/success.php" />
 
-<input id="btn" type="submit" value="Submit" onlclick="send();"/>
+<button type="submit">submit</button>
 
 </div>
 </form>
