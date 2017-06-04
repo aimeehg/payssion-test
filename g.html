@@ -23,7 +23,7 @@ var desc = $('#desc').val();
 var returnurl = $('#return').val();
 var secret = "98147c9bf749c14bbdba00744d08a7a4";
 var data = [api, pm, amount, currency, order, secret];
-var sign = data.join();
+var sign = data.join("|");
 console.log(sign);
 //console.log(json);
       $.ajax({	
