@@ -8,7 +8,7 @@
     </head>
     <body>
         <script type="text/javascript">
- $("#btn").click(function(){
+ function send(){
  var pm = $('input[name=method]:checked').val();
 var api = $('#api').val();
 var amount = $('#amount').val();
@@ -27,11 +27,11 @@ var sign = data.join();
                 console.log(response);  
             }
         });
-    });
+    }
 </script>
     <b>Choose payment method:</b>
 
-<form id="form"  method="post" name="payssion_payment">
+<form id="form" method="post" name="payssion_payment">
 <div class="payment-selector">
 <input id="alipay" checked="checked" name="method" type="radio" value="alipay_cn" />
 <label class="payment alipay" for="alipay"></label>
@@ -48,7 +48,7 @@ Enter amount:
 <input id="currency" name="currency" type="hidden" value="USD" />
 <input id="return" name="return_url" type="hidden" value="payssion-test.azurewebsites.net/success.php" />
 
-<input id="btn" type="submit" value="Submit"/>
+<input id="btn" type="submit" value="Submit" onlclick="send();"/>
 
 </div>
 </form>
